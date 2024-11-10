@@ -1,7 +1,8 @@
 /* Example of looping over all headers (not recommended as production solution,
  * do NOT use this to "solve" your problems with headers, use ONLY for debugging) */
 
-const uWS = require('../dist/uws.js');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
 const port = 9001;
 
 const app = uWS./*SSL*/App({
