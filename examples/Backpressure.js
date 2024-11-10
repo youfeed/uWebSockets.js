@@ -23,7 +23,8 @@ const backpressure = 1024;
 let messages = 0;
 let messageNumber = 0;
 
-const uWS = require('../dist/uws.js');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
 const port = 9001;
 
 const app = uWS./*SSL*/App({
