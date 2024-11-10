@@ -4,8 +4,9 @@
  * Try navigating to the adderss with Chrome and see the video
  * in real time. */
 
-const uWS = require('../dist/uws.js');
-const fs = require('fs');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
+import fs from 'fs';
 
 const port = 9001;
 const fileName = '/home/alexhultman/Downloads/Sintel.2010.720p.mkv';
