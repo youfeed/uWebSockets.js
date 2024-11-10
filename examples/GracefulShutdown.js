@@ -1,6 +1,7 @@
 /* Minimal example that shuts down gracefully */
 
-const uWS = require('../dist/uws.js');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
 const port = 9001;
 
 /* We store the listen socket here, so that we can shut it down later */
