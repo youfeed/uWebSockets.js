@@ -1,6 +1,6 @@
 /* Same as HelloWorld, but with automatic port selection. */
-
-const uWS = require('../dist/uws.js');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
 let port = 0; 
 
 const app = uWS./*SSL*/App({
