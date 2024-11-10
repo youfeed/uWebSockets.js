@@ -1,8 +1,8 @@
-const https = require('https');
-const forge = require('node-forge');
-const crypto = require('crypto');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
+import forge from 'node-forge';
+import crypto from 'crypto';
 // Generate CA certificate
 const ca = generateCACertificate();
 const caCertPem = pemEncodeCert(ca.cert);
@@ -21,7 +21,8 @@ fs.writeFileSync(path.join(__dirname, "server.ca"), caCertPem);
 fs.writeFileSync(path.join(__dirname, "server.key"), serverKeyPem);
 fs.writeFileSync(path.join(__dirname, "server.cert"), serverCertPem);
 
-const uWS = require('../dist/uws');
+// npm install uNetworking/uWebSockets.js#latest package.json->type:module
+import uWS from 'uWebSockets.js';
 const port = 8086;
 
 const app = uWS.SSLApp({
